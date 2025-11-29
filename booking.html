@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - 100SMILES Dental Care</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1 class="logo">100SMILES</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="technology.html">Our Technology</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="booking.html"class="active">Book Online</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Your Dental Appointment</h1>
+            <p>Quick and easy online booking with our new system</p>
+        </div>
+    </section>
+
+    <section class="booking-offer">
+        <div class="container">
+            <div class="offer-banner">
+                <h3>🎁 Special Offer: 25% Discount!</h3>
+                <p>Get 25% off your next dental visit when you book through our online form</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-form-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="form-intro">
+                    <h2>Schedule Your Visit</h2>
+                    <p>Fill out the form below and we'll contact you to confirm your appointment</p>
+                </div>
+
+                <form id="bookingForm" class="booking-form" onsubmit="return validateForm()">
+                    <!-- Personal Information -->
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <!-- Appointment Details -->
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Date *</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate">
+                        <span class="error-message" id="dateError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentTime">Preferred Time *</label>
+                        <select id="appointmentTime" name="appointmentTime">
+                            <option value="">Select a time</option>
+                            <option value="08:30">08:30 AM</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="09:30">09:30 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="10:30">10:30 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="11:30">11:30 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="14:30">02:30 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="15:30">03:30 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                            <option value="16:30">04:30 PM</option>
+                            <option value="17:00">05:00 PM</option>
+                        </select>
+                        <span class="error-message" id="timeError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="serviceType">Service Required *</label>
+                        <select id="serviceType" name="serviceType">
+                            <option value="">Select a service</option>
+                            <option value="checkup">Regular Check-up</option>
+                            <option value="cleaning">Teeth Cleaning</option>
+                            <option value="filling">Dental Filling</option>
+                            <option value="crown">Crown/Bridge</option>
+                            <option value="implant">Dental Implant</option>
+                            <option value="ortho">Orthodontics</option>
+                            <option value="whitening">Teeth Whitening</option>
+                            <option value="emergency">Emergency Care</option>
+                            <option value="pediatric">Children's Dentistry</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message" id="serviceError"></span>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-group">
+                        <label for="message">Additional Notes</label>
+                        <textarea id="message" name="message" placeholder="Any specific concerns or requirements..." rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Send me dental health tips and special offers</label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn">Book Appointment Now</button>
+                    </div>
+                </form>
+
+                <div class="booking-info">
+                    <h3>📞 Prefer to Call?</h3>
+                    <p>You can also book your appointment by phone:</p>
+                    <p class="phone-number">07 5000 5599</p>
+                    
+                    <div class="info-box">
+                        <h4>📍 Our Location</h4>
+                        <p>33 Fantail Street, Razole, Queensland</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h4>🕒 Opening Hours</h4>
+                        <p>Monday - Friday: 8:30am - 6:30pm</p>
+                        <p>Saturday - Sunday: 8:30am - 1:00pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 100SMILES Dental Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
